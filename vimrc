@@ -3,8 +3,9 @@ set nocompatible
 filetype off
 syntax on
 
+let g:derwiath_vim_config_dir=expand('<sfile>:p:h')
 " Look for packages in $(current directory)/pack
-let &packpath.=',' . expand('%:p:h')
+let &packpath.=',' . g:derwiath_vim_config_dir
 
 " English please
 set langmenu=en_US
