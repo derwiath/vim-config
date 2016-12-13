@@ -3,6 +3,9 @@ set nocompatible
 filetype off
 syntax on
 
+" Look for packages in $(current directory)/pack
+let &packpath.=',' . expand('%:p:h')
+
 " English please
 set langmenu=en_US
 let $LANG = 'en_US'
