@@ -1,0 +1,3 @@
+[submodule "pack/derwiath/start/vim-grepit"]
+	path = pack/derwiath/start/vim-grepit
+	url = git@github.com:derwiath/vim-grepit.git

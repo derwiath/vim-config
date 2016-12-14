@@ -82,3 +82,9 @@ noremap <C-S-TAB> :tabprev<CR>
 
 noremap <silent> <Leader>s :source $MYVIMRC<CR>
 noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
+
+" # Plugin package configs
+
+" ## derwiath/vim-grepit
+nnoremap <silent> <Leader>f :set operatorfunc=GrepItOperator<CR>g@
+vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
