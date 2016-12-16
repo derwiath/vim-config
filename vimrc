@@ -95,3 +95,12 @@ noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 " ## derwiath/vim-grepit
 nnoremap <silent> <Leader>f :set operatorfunc=GrepItOperator<CR>g@
 vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
+
+" Configure CtrlP
+"set wildignore=*.meta
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|build\|ninja-build\|target\|tundra-output\|t2-output\|\<\w*\>.xcodeproj\|node_modules',
+  \ 'file': '\v\.(exe|so|dll|tundra.*|swp|meta|class|pyc)$',
+  \ }
+"let g:ctrlp_jump_to_buffer = 0
+let g:ctrlp_working_path_mode = 0
