@@ -22,3 +22,6 @@
 [submodule "pack/derwiath/start/hive.vim"]
 	path = pack/derwiath/opt/hive.vim
 	url = https://github.com/autowitch/hive.vim.git
+[submodule "pack/derwiath/start/vim-gradle"]
+	path = pack/derwiath/opt/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git
