@@ -4,3 +4,6 @@
 [submodule "pack/derwiath/start/ctrlp.vim"]
 	path = pack/derwiath/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "pack/derwiath/start/vim-dispatch"]
+	path = pack/derwiath/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
