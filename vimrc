@@ -68,6 +68,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Configure statusline
+set statusline=%t\ [%c,%l]\ [%{&ff}]\ %y
+
 " Shortcuts
 let mapleader=","
 
