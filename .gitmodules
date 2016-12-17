@@ -7,3 +7,6 @@
 [submodule "pack/derwiath/start/vim-dispatch"]
 	path = pack/derwiath/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "vim-abolish"]
+	path = pack/derwiath/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
