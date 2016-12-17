@@ -19,3 +19,6 @@
 [submodule "a.vim"]
 	path = pack/derwiath/start/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
+[submodule "pack/derwiath/start/hive.vim"]
+	path = pack/derwiath/opt/hive.vim
+	url = https://github.com/autowitch/hive.vim.git
