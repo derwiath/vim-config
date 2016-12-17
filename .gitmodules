@@ -10,3 +10,6 @@
 [submodule "vim-abolish"]
 	path = pack/derwiath/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "pack/derwiath/start/vim-bad-whitespace"]
+	path = pack/derwiath/start/vim-bad-whitespace
+	url = https://github.com/bitc/vim-bad-whitespace.git

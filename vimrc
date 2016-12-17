@@ -104,3 +104,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 "let g:ctrlp_jump_to_buffer = 0
 let g:ctrlp_working_path_mode = 0
+
+" Configure bad-whitespace
+noremap <silent> <Leader><Space> :EraseBadWhitespace<CR>
+highlight default BadWhitespace ctermbg=red guibg=darkgrey
+highlight ColorColumn ctermbg=red guibg=darkgrey
