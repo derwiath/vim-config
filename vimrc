@@ -70,7 +70,7 @@ map <right> <nop>
 
 " Configure statusline
 set laststatus=2 " Enables the status line at the bottom of Vim
-set statusline=%t\ [%c,%l]\ [%{&ff}]\ %y
+set statusline=%t\ [%c,%l]\ [%{&ff}]\ %y\ %{fugitive#statusline()}
 
 " Shortcuts
 let mapleader=","

@@ -25,3 +25,6 @@
 [submodule "pack/derwiath/start/vim-gradle"]
 	path = pack/derwiath/opt/vim-gradle
 	url = https://github.com/tfnico/vim-gradle.git
+[submodule "pack/derwiath/start/vim-fugitive"]
+	path = pack/derwiath/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
