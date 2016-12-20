@@ -70,8 +70,8 @@ map <right> <nop>
 
 " Configure statusline
 set laststatus=2 " Enables the status line at the bottom of Vim
-" [filename] [column,line] [fileformat] [filetype] [git-branch]
-set statusline=%t\ [%c,%l]\ [%{&ff}]\ %y\ %{fugitive#statusline()}
+" [filename][modified] [column,line] [fileformat] [filetype] [git-branch]
+set statusline=%t%m\ [%c,%l]\ [%{&ff}]\ %y\ %{fugitive#statusline()}
 
 " Shortcuts
 let mapleader=","
