@@ -6,6 +6,8 @@ syntax on
 let g:derwiath_vim_config_dir=expand('<sfile>:p:h')
 " Look for packages in $(current directory)/pack
 let &packpath.=',' . g:derwiath_vim_config_dir
+" Include $(current dir) in runtimepath
+let &runtimepath=g:derwiath_vim_config_dir . ',' . &runtimepath
 
 " English please
 set langmenu=en_US
