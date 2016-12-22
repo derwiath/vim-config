@@ -31,3 +31,6 @@
 [submodule "pack/derwiath/start/csindent.vim"]
 	path = pack/derwiath/start/csindent.vim
 	url = git@github.com:derwiath/csindent.vim.git
+[submodule "pack/derwiath/opt/vim-perforce"]
+	path = pack/derwiath/opt/vim-perforce
+	url = https://github.com/nfvs/vim-perforce.git
