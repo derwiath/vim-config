@@ -37,3 +37,6 @@
 [submodule "pack/derwiath/start/vim-runit"]
 	path = pack/derwiath/start/vim-runit
 	url = git@github.com:derwiath/vim-runit.git
+[submodule "pack/derwiath/start/vim-toggleit"]
+	path = pack/derwiath/start/vim-toggleit
+	url = git@github.com:derwiath/vim-toggleit.git

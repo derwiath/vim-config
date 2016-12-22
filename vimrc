@@ -105,6 +105,10 @@ noremap <silent> <Leader>u :execute('RunItDispatch ' . s:vim_runit_script . ' te
 noremap <silent> <Leader>x :execute('RunItDispatch ' . s:vim_runit_script . ' extra')<CR>
 noremap <silent> <Leader>y :execute('RunItDispatch ' . s:vim_runit_script . ' tags')<CR>
 
+" ## derwiath/vim-toggleit
+noremap <silent> <Leader>n :ToggleItNumber<CR>
+noremap <silent> <Leader>q :ToggleItQuickfix<CR>
+
 " Configure CtrlP
 "set wildignore=*.meta
 let g:ctrlp_custom_ignore = {
