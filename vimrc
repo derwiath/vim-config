@@ -97,6 +97,14 @@ noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 nnoremap <silent> <Leader>f :set operatorfunc=GrepItOperator<CR>g@
 vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
 
+" ## derwiath/vim-runit
+let s:vim_runit_script='.vim-runit-cmd.sh'
+noremap <silent> <Leader>m :execute('RunItMake ' . s:vim_runit_script . ' make')<CR>
+noremap <silent> <Leader>c :execute('RunItMake ' . s:vim_runit_script . ' make_file ' . expand('%s'))<CR>
+noremap <silent> <Leader>u :execute('RunItDispatch ' . s:vim_runit_script . ' test')<CR>
+noremap <silent> <Leader>x :execute('RunItDispatch ' . s:vim_runit_script . ' extra')<CR>
+noremap <silent> <Leader>y :execute('RunItDispatch ' . s:vim_runit_script . ' tags')<CR>
+
 " Configure CtrlP
 "set wildignore=*.meta
 let g:ctrlp_custom_ignore = {
