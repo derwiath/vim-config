@@ -35,7 +35,8 @@ color desert
 if has("gui_running")
   "color desert
   set guifont=Courier:h10
-  set guioptions-=T
+  set guioptions-=T " Remove toolbar
+  set guioptions-=r " Remove right scrollbar
   if exists(":winpos") == 2
     winpos 0 0
   endif
