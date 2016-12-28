@@ -99,12 +99,12 @@ nnoremap <silent> <Leader>f :set operatorfunc=GrepItOperator<CR>g@
 vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
 
 " ## derwiath/vim-runit
-let s:vim_runit_script='.vim-runit-cmd.sh'
-noremap <silent> <Leader>m :execute('RunItMake ' . s:vim_runit_script . ' make')<CR>
-noremap <silent> <Leader>c :execute('RunItMake ' . s:vim_runit_script . ' make_file ' . expand('%s'))<CR>
-noremap <silent> <Leader>u :execute('RunItDispatch ' . s:vim_runit_script . ' test')<CR>
-noremap <silent> <Leader>x :execute('RunItDispatch ' . s:vim_runit_script . ' extra')<CR>
-noremap <silent> <Leader>y :execute('RunItDispatch ' . s:vim_runit_script . ' tags')<CR>
+let g:vim_runit_script='.vim-runit-cmd.sh'
+noremap <silent> <Leader>m :execute('RunItMake ' . g:vim_runit_script . ' make')<CR>
+noremap <silent> <Leader>c :execute('RunItMake ' . g:vim_runit_script . ' make_file ' . expand('%s'))<CR>
+noremap <silent> <Leader>u :execute('RunItDispatch ' . g:vim_runit_script . ' test')<CR>
+noremap <silent> <Leader>x :execute('RunItDispatch ' . g:vim_runit_script . ' extra')<CR>
+noremap <silent> <Leader>y :execute('RunItDispatch ' . g:vim_runit_script . ' tags')<CR>
 
 " ## derwiath/vim-toggleit
 noremap <silent> <Leader>n :ToggleItNumber<CR>
