@@ -31,9 +31,10 @@ set noswapfile
 set title
 set completeopt=menu,preview
 
-color desert
+set background=dark
+color solarized
+
 if has("gui_running")
-  "color desert
   set guifont=Courier:h10
   set guioptions-=T " Remove toolbar
   set guioptions-=r " Remove right scrollbar
