@@ -83,10 +83,10 @@ noremap <F2> ]c
 noremap <S-F2> [c
 noremap <F3> :lnext<CR>
 noremap <S-F3> :lprev<CR>
-noremap <F4> :cnext<CR>
-noremap <S-F4> :cprev<CR>
-noremap <C-F4> :cnfile<CR>
-noremap <C-S-F4> :cpfile<CR>
+noremap <C-M> :cnext<CR>
+noremap <S-M> :cprev<CR>
+noremap <C-B> :cnfile<CR>
+noremap <S-B> :cpfile<CR>
 noremap <C-TAB> :tabnext<CR>
 noremap <C-S-TAB> :tabprev<CR>
 
