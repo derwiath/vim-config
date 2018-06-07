@@ -40,3 +40,6 @@
 [submodule "pack/derwiath/start/vim-toggleit"]
 	path = pack/derwiath/start/vim-toggleit
 	url = git@github.com:derwiath/vim-toggleit.git
+[submodule "pack/derwiath/opt/vim-scala"]
+	path = pack/derwiath/opt/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
