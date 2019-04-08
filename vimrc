@@ -134,3 +134,12 @@ let g:alternateExtensions_cc = "h,inl"
 let g:alternateExtensions_m = "h"
 let g:alternateExtensions_mm = "h"
 let g:alternateNoDefaultAlternate = 1
+
+
+" Configure vim-racer
+set hidden
+let g:racer_cmd = "/Users/andersson/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
+au FileType rust nmap <Leader>rt <Plug>(rust-def)
+au FileType rust nmap <Leader>rd <Plug>(rust-doc)
