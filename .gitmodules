@@ -46,3 +46,6 @@
 [submodule "pack/derwiath/start/rust.vim"]
 	path = pack/derwiath/start/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "pack/derwiath/start/vim-racer"]
+	path = pack/derwiath/start/vim-racer
+	url = git@github.com:racer-rust/vim-racer.git
