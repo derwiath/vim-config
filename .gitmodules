@@ -43,3 +43,6 @@
 [submodule "pack/derwiath/opt/vim-scala"]
 	path = pack/derwiath/opt/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "pack/derwiath/start/rust.vim"]
+	path = pack/derwiath/start/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
