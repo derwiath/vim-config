@@ -137,7 +137,7 @@ let g:alternateNoDefaultAlternate = 1
 
 
 " Configure vim-racer
-set hidden
+"set hidden
 let g:racer_cmd = "/Users/andersson/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 let g:racer_insert_paren = 1
