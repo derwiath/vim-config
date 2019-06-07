@@ -49,3 +49,6 @@
 [submodule "pack/derwiath/start/vim-racer"]
 	path = pack/derwiath/start/vim-racer
 	url = git@github.com:racer-rust/vim-racer.git
+[submodule "pack/derwiath/start/vim-fixmyjs"]
+	path = pack/derwiath/start/vim-fixmyjs
+	url = git@github.com:ruanyl/vim-fixmyjs.git
