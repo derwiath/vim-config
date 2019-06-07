@@ -143,3 +143,4 @@ let g:racer_experimental_completer = 1
 let g:racer_insert_paren = 1
 au FileType rust nmap <Leader>rt <Plug>(rust-def)
 au FileType rust nmap <Leader>rd <Plug>(rust-doc)
+au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
