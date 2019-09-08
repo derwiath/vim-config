@@ -52,3 +52,15 @@
 [submodule "pack/derwiath/start/vim-fixmyjs"]
 	path = pack/derwiath/start/vim-fixmyjs
 	url = git@github.com:ruanyl/vim-fixmyjs.git
+[submodule "pack/derwiath/start/async.vim"]
+	path = pack/derwiath/start/async.vim
+	url = https://github.com/prabirshrestha/async.vim
+[submodule "pack/derwiath/start/vim-lsp"]
+	path = pack/derwiath/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp
+[submodule "pack/derwiath/start/asyncomplete.vim"]
+	path = pack/derwiath/start/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim
+[submodule "pack/derwiath/start/asyncomplete-lsp.vim"]
+	path = pack/derwiath/start/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim

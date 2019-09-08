@@ -138,12 +138,19 @@ let g:alternateNoDefaultAlternate = 1
 
 " Configure vim-racer
 "set hidden
-let g:racer_cmd = "/Users/andersson/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-let g:racer_insert_paren = 1
-au FileType rust nmap <Leader>rt <Plug>(rust-def)
-au FileType rust nmap <Leader>rd <Plug>(rust-doc)
-au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
+"let g:racer_cmd = "/Users/andersson/.cargo/bin/racer"
+"let g:racer_experimental_completer = 1
+"let g:racer_insert_paren = 1
+"au FileType rust nmap <Leader>rt <Plug>(rust-def)
+"au FileType rust nmap <Leader>rd <Plug>(rust-doc)
+"au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
 
 " Configure fixmyjs
 au FileType javascript nmap <silent> <Leader>b :Fixmyjs<CR>
