@@ -11,7 +11,7 @@ setlocal softtabstop=4
 setlocal expandtab
 setlocal nowrap
 
-setlocal textwidth=120
-setlocal colorcolumn=121
+setlocal textwidth=100
+setlocal colorcolumn=101
 
 let b:undo_indent = "setl cin<"
