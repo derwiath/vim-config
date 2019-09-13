@@ -9,6 +9,10 @@ let &packpath.=',' . g:derwiath_vim_config_dir
 " Include $(current dir) in runtimepath
 let &runtimepath=g:derwiath_vim_config_dir . ',' . &runtimepath
 
+if has('win32')
+  let &viewdir=expand('$USERPROFILE') . '\vimfiles\view'
+endif
+
 " English please
 set langmenu=en_US
 let $LANG = 'en_US'
