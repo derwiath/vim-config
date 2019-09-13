@@ -96,6 +96,7 @@ noremap <C-M> :cnext<CR>
 noremap <S-M> :cprev<CR>
 noremap <C-B> :cnfile<CR>
 noremap <S-B> :cpfile<CR>
+noremap <Leader>w :tabnew<CR>
 noremap <C-TAB> :tabnext<CR>
 noremap <C-S-TAB> :tabprev<CR>
 
