@@ -148,12 +148,22 @@ let g:alternateNoDefaultAlternate = 1
 
 " Configure vim-racer
 "set hidden
-"let g:racer_cmd = "/Users/andersson/.cargo/bin/racer"
-"let g:racer_experimental_completer = 1
+if has('win32')
+  let s:cargo_bin=expand('$USERPROFILE') . '/.cargo/bin'
+else
+  let s:cargo_bin=expand('$HOME') . '/.cargo/bin'
+endif
+let g:racer_cmd = s:cargo_bin . '/racer'
+let g:racer_experimental_completer = 1
 "let g:racer_insert_paren = 1
-"au FileType rust nmap <Leader>rt <Plug>(rust-def)
-"au FileType rust nmap <Leader>rd <Plug>(rust-doc)
-"au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
+au FileType rust nmap <silent> <Leader>t <Plug>(rust-def)
+au FileType rust nmap <silent> <Leader>d <Plug>(rust-doc)
+au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
+au FileType rust setlocal omnifunc=racer#RacerComplete
+"au FileType rust setlocal omnifunc=lsp#complete
+"au FileType rust nmap <silent> <Leader>t <Plug>(lsp-peek-definition)
+
+let g:rustfmt_autosave = 1
 if executable('rls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'rls',
