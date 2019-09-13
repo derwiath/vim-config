@@ -38,6 +38,11 @@ set completeopt=menu,preview
 set background=dark
 color solarized
 
+function! GuiTabLabel()
+  return fnamemodify(bufname(winbufnr(1)), ":t")
+endfunction
+set guitablabel=%!GuiTabLabel()
+
 if has("gui_running")
   set guifont=Courier:h10
   set guioptions-=T " Remove toolbar
