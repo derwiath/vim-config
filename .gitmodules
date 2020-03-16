@@ -76,3 +76,6 @@
 [submodule "pack/derwiath/start/vim-magnum"]
 	path = pack/derwiath/start/vim-magnum
 	url = https://github.com/glts/vim-magnum.git
+[submodule "pack/derwiath/opt/vim-ddf"]
+	path = pack/derwiath/opt/vim-ddf
+	url = git@bitbucket.org:derwiath/vim-ddf.git
