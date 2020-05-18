@@ -108,6 +108,9 @@ noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 " ## derwiath/vim-grepit
 nnoremap <silent> <Leader>f :set operatorfunc=GrepItOperator<CR>g@
 vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
+let g:grepit_lang_map = {
+  \ "js" : "js,ts,tsx,json" ,
+  \ }
 
 " ## derwiath/vim-runit
 let g:vim_runit_script='.vim-runit-cmd.sh'
