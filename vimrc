@@ -160,6 +160,7 @@ let g:racer_cmd = s:cargo_bin . '/racer'
 let g:racer_experimental_completer = 1
 "let g:racer_insert_paren = 1
 au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
+au FileType rust nmap <silent> <Leader>u :Dispatch cargo test<CR>
 au FileType rust nmap <silent> <Leader>t <Plug>(rust-def)
 au FileType rust nmap <silent> <Leader>d <Plug>(rust-doc)
 au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
