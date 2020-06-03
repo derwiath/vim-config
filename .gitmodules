@@ -79,3 +79,9 @@
 [submodule "pack/derwiath/opt/vim-ddf"]
 	path = pack/derwiath/opt/vim-ddf
 	url = git@bitbucket.org:derwiath/vim-ddf.git
+[submodule "pack/derwiath/start/fzf.vim"]
+	path = pack/derwiath/opt/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule "pack/derwiath/start/fzf"]
+	path = pack/derwiath/opt/fzf
+	url = git@github.com:junegunn/fzf.git
