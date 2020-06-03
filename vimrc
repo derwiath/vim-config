@@ -44,7 +44,7 @@ endfunction
 set guitablabel=%!GuiTabLabel()
 
 if has("gui_running")
-  set guifont=Courier:h10
+  set guifont=Courier:h13
   set guioptions-=T " Remove toolbar
   set guioptions-=r " Remove right scrollbar
   if exists(":winpos") == 2
