@@ -2,7 +2,7 @@
 	path = pack/derwiath/start/vim-grepit
 	url = git@github.com:derwiath/vim-grepit.git
 [submodule "pack/derwiath/start/ctrlp.vim"]
-	path = pack/derwiath/start/ctrlp.vim
+	path = pack/derwiath/opt/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "pack/derwiath/start/vim-dispatch"]
 	path = pack/derwiath/start/vim-dispatch
