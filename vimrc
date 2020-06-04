@@ -132,6 +132,12 @@ noremap <silent> <Leader>q :ToggleItQuickfix<CR>
   \ }
 "let g:ctrlp_jump_to_buffer = 0
 "let g:ctrlp_working_path_mode = 0
+"
+" Configure fzf
+packadd fzf
+packadd fzf.vim
+let g:fzf_preview_window = ''
+noremap <C-p> :Files
 
 " Configure bad-whitespace
 noremap <silent> <Leader><Space> :EraseBadWhitespace<CR>
