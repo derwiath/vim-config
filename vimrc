@@ -137,7 +137,7 @@ noremap <silent> <Leader>q :ToggleItQuickfix<CR>
 packadd fzf
 packadd fzf.vim
 let g:fzf_preview_window = ''
-noremap <C-p> :Files
+noremap <C-p> :Files<CR>
 
 " Configure bad-whitespace
 noremap <silent> <Leader><Space> :EraseBadWhitespace<CR>
