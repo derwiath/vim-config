@@ -124,6 +124,9 @@ noremap <silent> <Leader>y :execute('RunItDispatch ' . g:vim_runit_script . ' ta
 noremap <silent> <Leader>n :ToggleItNumber<CR>
 noremap <silent> <Leader>q :ToggleItQuickfix<CR>
 
+" Make Enter go to current line in quickfix window
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
 " Configure CtrlP
 "set wildignore=*.meta
 "let g:ctrlp_custom_ignore = {
