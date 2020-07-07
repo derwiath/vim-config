@@ -79,3 +79,6 @@
 [submodule "pack/derwiath/start/fzf"]
 	path = pack/derwiath/opt/fzf
 	url = git@github.com:junegunn/fzf.git
+[submodule "pack/derwiath/opt/coc.nvim"]
+	path = pack/derwiath/opt/coc.nvim
+	url = git@github.com:neoclide/coc.nvim.git
