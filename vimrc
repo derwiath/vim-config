@@ -127,15 +127,6 @@ noremap <silent> <Leader>q :ToggleItQuickfix<CR>
 " Make Enter go to current line in quickfix window
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
-" Configure CtrlP
-"set wildignore=*.meta
-"let g:ctrlp_custom_ignore = {
-" \ 'dir':  '\.git$\|ninja-build\|target\|tundra-output\|t2-output\|\<\w*\>.xcodeproj\',
-"  \ 'file': '\v\.(exe|so|dll|tundra.*|swp|meta|class|pyc)$',
-"  \ }
-"let g:ctrlp_jump_to_buffer = 0
-"let g:ctrlp_working_path_mode = 0
-"
 " Configure fzf
 packadd fzf
 packadd fzf.vim
