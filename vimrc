@@ -32,6 +32,7 @@ set showmatch
 set autoread
 set nobackup
 set noswapfile
+set nowritebackup
 set title
 set completeopt=menu,preview
 
@@ -82,7 +83,7 @@ map <right> <nop>
 " Configure statusline
 set laststatus=2 " Enables the status line at the bottom of Vim
 " [filename][modified] [column,line] [fileformat] [filetype] [csindent] [git-branch]
-set statusline=%t%m\ [%c,%l]\ [%{&ff}]\ %y\ [%{CodingStyleIndent()}]\ \%{fugitive#statusline()}
+set statusline=%t%m\ [%c,%l]\ [%{&ff}]\ %y\ [%{CodingStyleIndent()}]\ \%{fugitive#statusline()}\ [%{coc#status()}]
 
 " Shortcuts
 let mapleader=","
@@ -100,7 +101,6 @@ noremap <Leader>w :tabnew<CR>
 noremap <C-TAB> :tabnext<CR>
 noremap <C-S-TAB> :tabprev<CR>
 
-noremap <silent> <Leader>s :source $MYVIMRC<CR>
 noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 
 " # Plugin package configs
@@ -179,7 +179,77 @@ au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
 au FileType rust nmap <silent> <Leader>u :Dispatch cargo test<CR>
 au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
 
+" Configure CoC
+" =============
+packadd coc.nvim
+
+set hidden
+set updatetime=300  " Lower default from 4s
+set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
+set signcolumn=number " Always show the signcolumn
+
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <CR> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
+
+" Navigate diagnostics
+nmap <silent> <F4> <Plug>(coc-diagnostic-next)
+nmap <silent> <S-F4> <Plug>(coc-diagnostic-prev)
+
+" GoTo code navigation.
+nmap <silent> <Leader>gd <Plug>(coc-definition)
+nmap <silent> <Leader>gt <Plug>(coc-type-definition)
+nmap <silent> <Leader>gi <Plug>(coc-implementation)
+nmap <silent> <Leader>gr <Plug>(coc-references)
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Use K to show documentation in preview window.
+nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
+
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Applying codeAction to the selected region.
+" Example: `<Leader>aap` for current paragraph
+xmap <Leader>a  <Plug>(coc-codeaction-selected)
+nmap <Leader>a  <Plug>(coc-codeaction-selected)
+" Remap keys for applying codeAction to the current buffer.
+nmap <Leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <Leader>af  <Plug>(coc-fix-current)
+
+nnoremap <silent><nowait> <Leader>l :CocList<CR>
+nnoremap <silent><nowait> <Leader>s :CocList symbols<CR>
+
+" =============
+" Configure CoC end
 
 " Configure fixmyjs
 au FileType javascript nmap <silent> <Leader>b :Fixmyjs<CR>
