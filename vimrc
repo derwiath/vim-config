@@ -192,7 +192,7 @@ au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
 packadd coc.nvim
 
 set hidden
-set updatetime=300  " Lower default from 4s
+set updatetime=100  " Lower default from 4s
 set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
 set signcolumn=number " Always show the signcolumn
 
