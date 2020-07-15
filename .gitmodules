@@ -84,4 +84,4 @@
 	url = git@github.com:ajmwagar/vim-deus.git
 [submodule "pack/derwiath/start/ron.vim"]
 	path = pack/derwiath/start/ron.vim
-	url = git@github.com:ron-rs/ron.vim.git
+	url = git@github.com:derwiath/ron.vim.git
