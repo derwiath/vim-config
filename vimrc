@@ -162,6 +162,7 @@ let g:rustfmt_autosave = 1
 au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
 au FileType rust nmap <silent> <Leader>u :Dispatch cargo test<CR>
 au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
+au FileType rust set number
 
 " Configure CoC
 " =============
