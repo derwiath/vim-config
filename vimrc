@@ -158,30 +158,6 @@ let g:alternateExtensions_mm = "h"
 let g:alternateNoDefaultAlternate = 1
 
 
-" Configure vim-racer
-"if has('win32')
-"  let s:cargo_bin=expand('$USERPROFILE') . '/.cargo/bin'
-"else
-"  let s:cargo_bin=expand('$HOME') . '/.cargo/bin'
-"endif
-"
-"let g:racer_cmd = s:cargo_bin . '/racer'
-"let g:racer_experimental_completer = 1
-""let g:racer_insert_paren = 1
-"au FileType rust nmap <silent> <Leader>t <Plug>(rust-def)
-"au FileType rust nmap <silent> <Leader>d <Plug>(rust-doc)
-"au FileType rust setlocal omnifunc=racer#RacerComplete
-""au FileType rust setlocal omnifunc=lsp#complete
-""au FileType rust nmap <silent> <Leader>t <Plug>(lsp-peek-definition)
-"
-"if executable('rls')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'rls',
-"        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-"        \ 'whitelist': ['rust'],
-"        \ })
-"endif
-
 let g:rustfmt_autosave = 1
 au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
 au FileType rust nmap <silent> <Leader>u :Dispatch cargo test<CR>
