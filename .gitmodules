@@ -14,7 +14,7 @@
 	path = pack/derwiath/start/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
 [submodule "a.vim"]
-	path = pack/derwiath/start/a.vim
+	path = pack/derwiath/opt/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
 [submodule "pack/derwiath/start/vim-fugitive"]
 	path = pack/derwiath/start/vim-fugitive

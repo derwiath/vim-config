@@ -148,14 +148,14 @@ highlight default BadWhitespace ctermbg=red guibg=darkgrey
 highlight ColorColumn ctermbg=red guibg=darkgrey
 
 " Configure A
-noremap <silent> <Leader>h :A<CR>
-let g:alternateExtensions_cpp = "h,inl"
-let g:alternateExtensions_inl = "cpp,h"
-let g:alternateExtensions_h = "inl,cpp,m,mm,cc"
-let g:alternateExtensions_cc = "h,inl"
-let g:alternateExtensions_m = "h"
-let g:alternateExtensions_mm = "h"
-let g:alternateNoDefaultAlternate = 1
+"noremap <silent> <Leader>h :A<CR>
+"let g:alternateExtensions_cpp = "h,inl"
+"let g:alternateExtensions_inl = "cpp,h"
+"let g:alternateExtensions_h = "inl,cpp,m,mm,cc"
+"let g:alternateExtensions_cc = "h,inl"
+"let g:alternateExtensions_m = "h"
+"let g:alternateExtensions_mm = "h"
+"let g:alternateNoDefaultAlternate = 1
 
 
 let g:rustfmt_autosave = 1
