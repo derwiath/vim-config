@@ -112,7 +112,7 @@ noremap <C-S-TAB> :tabprev<CR>
 " CTRL-C in visual mode to copy selection
 vnoremap <C-C> "+y
 " CTRL-V in normal mode to paste (after cursor)
-nnoremap <C-V> "+gp
+"nnoremap <C-V> "+gp
 
 noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 
