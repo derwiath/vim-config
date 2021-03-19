@@ -175,7 +175,7 @@ au FileType rust set fileencoding=utf-8
 " =============
 packadd coc.nvim
 
-set hidden
+set nohidden
 set updatetime=100  " Lower default from 4s
 set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
 set signcolumn=number " Always show the signcolumn
