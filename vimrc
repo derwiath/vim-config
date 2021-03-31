@@ -143,7 +143,7 @@ autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 " Configure fzf
 packadd fzf
 packadd fzf.vim
-let g:fzf_preview_window = ''
+let g:fzf_preview_window = []
 let g:fzf_history_dir = '~/temp/fzf-history'
 noremap <C-p> :Files<CR>
 noremap <C-g> :Rg<CR>
