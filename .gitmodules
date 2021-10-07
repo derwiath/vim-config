@@ -56,7 +56,7 @@
 	path = pack/derwiath/opt/asyncomplete-lsp.vim
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim
 [submodule "pack/derwiath/start/typescript-vim"]
-	path = pack/derwiath/start/typescript-vim
+	path = pack/derwiath/opt/typescript-vim
 	url = git@github.com:leafgarland/typescript-vim.git
 [submodule "pack/derwiath/start/plantuml-syntax"]
 	path = pack/derwiath/start/plantuml-syntax
