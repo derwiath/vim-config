@@ -41,7 +41,7 @@
 	path = pack/derwiath/opt/vim-racer
 	url = git@github.com:racer-rust/vim-racer.git
 [submodule "pack/derwiath/start/vim-fixmyjs"]
-	path = pack/derwiath/start/vim-fixmyjs
+	path = pack/derwiath/opt/vim-fixmyjs
 	url = git@github.com:ruanyl/vim-fixmyjs.git
 [submodule "pack/derwiath/start/async.vim"]
 	path = pack/derwiath/opt/async.vim
