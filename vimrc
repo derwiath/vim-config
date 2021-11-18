@@ -242,7 +242,7 @@ au FileType cs vmap <silent> <leader>b  <Plug>(coc-format-selected)
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Use K to show documentation in preview window.
+" Use <Leader>d to show documentation in preview window.
 nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
 
 
