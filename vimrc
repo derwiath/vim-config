@@ -165,6 +165,24 @@ highlight ColorColumn ctermbg=red guibg=darkgrey
 "let g:alternateExtensions_mm = "h"
 "let g:alternateNoDefaultAlternate = 1
 
+" clang-format
+function! s:ClangFormatCmd() range
+  if !exists('g:clang_format_script')
+    echoerr 'Please define g:clang_format_script with full path to clang-format.py'
+    return
+  endif
+
+  if has('python3')
+    silent execute 'py3file ' . g:clang_format_script
+  elseif has('python')
+    silent execute 'pyfile ' . g:clang_format_script
+  else
+    echoerr 'Missing python integration, can not run clang-format"
+  endif
+endfunction
+
+command! -nargs=0 -range ClangFormat call <SID>ClangFormatCmd()
+au FileType cpp noremap <silent> <Leader>b :ClangFormat<CR>
 
 let g:rustfmt_autosave = 1
 au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
