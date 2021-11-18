@@ -184,6 +184,7 @@ endfunction
 command! -nargs=0 -range ClangFormat call <SID>ClangFormatCmd()
 au FileType cpp noremap <silent> <Leader>b :ClangFormat<CR>
 
+" Rust
 let g:rustfmt_autosave = 1
 au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
 au FileType rust nmap <silent> <Leader>u :Dispatch cargo test<CR>
