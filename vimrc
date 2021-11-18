@@ -269,8 +269,5 @@ nnoremap <silent><nowait> <Leader>s :CocList symbols<CR>
 " =============
 " Configure CoC end
 
-" Configure fixmyjs
-au FileType javascript nmap <silent> <Leader>b :Fixmyjs<CR>
-
 " Config vim-dispatch to prioritize iTerm
 let g:dispatch_handlers = ['iterm', 'tmux', 'job', 'screen', 'windows', 'x11', 'headless',]
