@@ -150,6 +150,9 @@ let $FZF_DEFAULT_COMMAND='rg --files'
 noremap <C-p> :Files<CR>
 noremap <C-g> :Rg<CR>
 
+" ## csindent
+let g:csindent_ini = join([g:derwiath_vim_config_dir, 'vim_csindent.ini'], '/')
+
 " Configure bad-whitespace
 noremap <silent> <Leader><Space> :EraseBadWhitespace<CR>
 highlight default BadWhitespace ctermbg=red guibg=darkgrey
