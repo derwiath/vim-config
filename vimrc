@@ -158,16 +158,6 @@ noremap <silent> <Leader><Space> :EraseBadWhitespace<CR>
 highlight default BadWhitespace ctermbg=red guibg=darkgrey
 highlight ColorColumn ctermbg=red guibg=darkgrey
 
-" Configure A
-"noremap <silent> <Leader>h :A<CR>
-"let g:alternateExtensions_cpp = "h,inl"
-"let g:alternateExtensions_inl = "cpp,h"
-"let g:alternateExtensions_h = "inl,cpp,m,mm,cc"
-"let g:alternateExtensions_cc = "h,inl"
-"let g:alternateExtensions_m = "h"
-"let g:alternateExtensions_mm = "h"
-"let g:alternateNoDefaultAlternate = 1
-
 " clang-format
 function! s:GetParentDirectory(filename)
   let l:filename_with_fwd_slash = substitute(a:filename, '\\', '/', 'g')
