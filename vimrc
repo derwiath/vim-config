@@ -126,7 +126,11 @@ let g:grepit_lang_map = {
   \ }
 
 " ## derwiath/vim-runit
-let g:vim_runit_script='.vim-runit-cmd.sh'
+if has('win32')
+  let g:vim_runit_script='.vim-runit-cmd.bat'
+else
+  let g:vim_runit_script='.vim-runit-cmd.sh'
+endif
 noremap <silent> <Leader>m :execute('RunItMake ' . g:vim_runit_script . ' make')<CR>
 noremap <silent> <Leader>c :execute('RunItMake ' . g:vim_runit_script . ' make_file ' . expand('%s'))<CR>
 noremap <silent> <Leader>u :execute('RunItDispatch ' . g:vim_runit_script . ' test')<CR>
