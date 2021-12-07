@@ -95,6 +95,7 @@ set statusline=%t%m\ [%c,%l]\ [%{&ff}]\ %y\ [%{CodingStyleIndent()}]\ \%{fugitiv
 
 " Shortcuts
 let mapleader=","
+let maplocalleader=","
 
 noremap <silent> <ESC> :nohlsearch<CR>
 noremap <F2> ]c
@@ -234,13 +235,13 @@ function! s:ClangFormatCmd() range
 endfunction
 
 command! -nargs=0 -range ClangFormat call <SID>ClangFormatCmd()
-au FileType cpp noremap <silent> <Leader>b :ClangFormat<CR>
+au FileType cpp noremap <silent> <LocalLeader>b :ClangFormat<CR>
 
 " Rust
 let g:rustfmt_autosave = 1
-au FileType rust nmap <silent> <Leader>m :Dispatch cargo build<CR>
-au FileType rust nmap <silent> <Leader>u :Dispatch cargo test<CR>
-au FileType rust nmap <silent> <Leader>b :RustFmt<CR>
+au FileType rust nmap <silent> <LocalLeader>m :Dispatch cargo build<CR>
+au FileType rust nmap <silent> <LocalLeader>u :Dispatch cargo test<CR>
+au FileType rust nmap <silent> <LocalLeader>b :RustFmt<CR>
 au FileType rust set number
 au FileType rust set colorcolumn=100
 au FileType rust set fileencoding=utf-8
