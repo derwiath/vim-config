@@ -290,8 +290,8 @@ nmap <silent> <Leader>gi <Plug>(coc-implementation)
 nmap <silent> <Leader>gr <Plug>(coc-references)
 
 " Code formatting
-au FileType cs nmap <silent> <leader>b  <Plug>(coc-format-selected)
-au FileType cs vmap <silent> <leader>b  <Plug>(coc-format-selected)
+au FileType cs,python nmap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
+au FileType cs,python vmap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
