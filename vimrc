@@ -254,7 +254,7 @@ packadd coc.nvim
 set nohidden
 set updatetime=100  " Lower default from 4s
 set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
-set signcolumn=number " Always show the signcolumn
+set signcolumn=yes "Always show the signcolumn
 
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
