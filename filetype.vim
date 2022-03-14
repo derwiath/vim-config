@@ -5,4 +5,5 @@ endif
 augroup filetypedetect
   au! BufRead,BufNewFile *.hql setfiletype hive
   au! BufRead,BufNewFile .clang-format* setfiletype yaml
+  au! BufRead,BufNewFile *.p8 setfiletype lua
 augroup END
