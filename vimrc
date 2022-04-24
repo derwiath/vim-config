@@ -177,7 +177,7 @@ function! s:GetParentDirectory(filename)
 endfunction
 
 function! s:GetClangFormatOverride(basename)
-  let l:current_file_dir = expand('<cfile>:p:h')
+  let l:current_file_dir = expand('%:p:h')
   let l:clang_format_path_file = findfile(a:basename, l:current_file_dir . ';')
   if l:clang_format_path_file == ''
     return ''
