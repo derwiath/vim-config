@@ -143,6 +143,11 @@ noremap <silent> <Leader>e :execute('RunItDispatch ' . g:vim_runit_script . ' ed
 noremap <silent> <Leader>n :ToggleItNumber<CR>
 noremap <silent> <Leader>q :ToggleItQuickfix<CR>
 
+" ## derwiath/vim-flipit
+packadd vim-flipit
+noremap <silent> <Leader>h :FlipIt<CR>
+
+
 " Make Enter go to current line in quickfix window
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 

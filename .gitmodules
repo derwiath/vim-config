@@ -91,3 +91,6 @@
 [submodule "pack/derwiath/opt/editorconfig-vim"]
 	path = pack/derwiath/opt/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "pack/derwiath/opt/vim-flipit"]
+	path = pack/derwiath/opt/vim-flipit
+	url = git@github.com:derwiath/vim-flipit.git
