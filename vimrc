@@ -205,7 +205,7 @@ function! s:GetClangFormatOverride(basename)
   return ''
 endfunction
 
-function! s:ClangFormatCmd() range
+function! s:ClangFormatLines(lines)
   if !exists('g:clang_format_script')
     echoerr 'Please define g:clang_format_script with full path to clang-format.py'
     return
@@ -222,12 +222,17 @@ function! s:ClangFormatCmd() range
 
   let l:clang_format_path = s:GetClangFormatOverride('.clang-format-override.json')
   if l:clang_format_path != ''
+    if !filereadable(l:clang_format_path)
+      echoerr 'Speficied clang-format path does not exist: ' . l:clang_format_path
+      return
+    endif
     if exists('g:clang_format_path')
       let l:old_clang_format_path = g:clang_format_path
     endif
     let g:clang_format_path = l:clang_format_path
   endif
 
+  let l:lines = a:lines
   silent execute l:python_cmd . ' ' . ' ' . g:clang_format_script
 
   if l:clang_format_path != ''
@@ -237,11 +242,24 @@ function! s:ClangFormatCmd() range
       unlet g:clang_format_path
     endif
   endif
-
 endfunction
 
-command! -nargs=0 -range ClangFormat call <SID>ClangFormatCmd()
-au FileType cpp noremap <silent> <LocalLeader>b :ClangFormat<CR>
+function! s:ClangFormatCmd()
+  let l:currentline=line('.')
+  let l:lines=l:currentline . ':' . l:currentline
+  call s:ClangFormatLines(l:lines)
+endf
+
+function! s:ClangFormatRangeCmd() range
+  let l:lines=a:firstline . ':' . a:lastline
+  call s:ClangFormatLines(l:lines)
+endfunction
+
+
+command! -nargs=0 ClangFormat call <SID>ClangFormatCmd()
+command! -nargs=0 -range ClangFormatRange '<,'>call <SID>ClangFormatRangeCmd()
+au FileType cpp nnoremap <silent> <Leader>b :ClangFormat<CR>
+au FileType cpp vnoremap <silent> <Leader>b :'<,'>ClangFormatRange<CR>
 
 " Rust
 let g:rustfmt_autosave = 1
