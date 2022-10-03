@@ -12,8 +12,14 @@ setlocal tabstop=4
 setlocal softtabstop=4
 setlocal noexpandtab
 
-setlocal textwidth=130
+setlocal textwidth=132
 setlocal nowrap
-setlocal colorcolumn=131
+setlocal colorcolumn=133
 
 let b:undo_indent = "setl cin<"
+
+" C++ error format for MSVC compiler
+setlocal errorformat^=%f\(%l\)%*\\W:%*\\W%t%*\\w%*\\W%m
+
+" Unreal Header Tool errors
+setlocal errorformat^=%f\(%l\)%*\\W:%*\\W%t%*\\w\:%*\\W%m
