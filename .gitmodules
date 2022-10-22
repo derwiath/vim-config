@@ -94,3 +94,6 @@
 [submodule "pack/derwiath/opt/vim-flipit"]
 	path = pack/derwiath/opt/vim-flipit
 	url = git@github.com:derwiath/vim-flipit.git
+[submodule "pack/derwiath/opt/vim-pico8-syntax"]
+	path = pack/derwiath/opt/vim-pico8-syntax
+	url = git@github.com:justinj/vim-pico8-syntax.git
