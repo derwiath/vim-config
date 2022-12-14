@@ -36,13 +36,13 @@
 	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "pack/derwiath/start/rust.vim"]
 	path = pack/derwiath/start/rust.vim
-	url = git@github.com:rust-lang/rust.vim.git
+	url = https://github.com/rust-lang/rust.vim.git
 [submodule "pack/derwiath/start/vim-racer"]
 	path = pack/derwiath/opt/vim-racer
-	url = git@github.com:racer-rust/vim-racer.git
+	url = https://github.com/racer-rust/vim-racer.git
 [submodule "pack/derwiath/start/vim-fixmyjs"]
 	path = pack/derwiath/opt/vim-fixmyjs
-	url = git@github.com:ruanyl/vim-fixmyjs.git
+	url = https://github.com/ruanyl/vim-fixmyjs.git
 [submodule "pack/derwiath/start/async.vim"]
 	path = pack/derwiath/opt/async.vim
 	url = https://github.com/prabirshrestha/async.vim
@@ -57,7 +57,7 @@
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim
 [submodule "pack/derwiath/start/typescript-vim"]
 	path = pack/derwiath/opt/typescript-vim
-	url = git@github.com:leafgarland/typescript-vim.git
+	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "pack/derwiath/start/plantuml-syntax"]
 	path = pack/derwiath/start/plantuml-syntax
 	url = https://github.com/aklt/plantuml-syntax.git
@@ -72,22 +72,22 @@
 	url = git@bitbucket.org:derwiath/vim-ddf.git
 [submodule "pack/derwiath/start/fzf.vim"]
 	path = pack/derwiath/opt/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
+	url = https://github.com/junegunn/fzf.vim.git
 [submodule "pack/derwiath/start/fzf"]
 	path = pack/derwiath/opt/fzf
-	url = git@github.com:junegunn/fzf.git
+	url = https://github.com/junegunn/fzf.git
 [submodule "pack/derwiath/opt/coc.nvim"]
 	path = pack/derwiath/opt/coc.nvim
-	url = git@github.com:neoclide/coc.nvim.git
+	url = https://github.com/neoclide/coc.nvim.git
 [submodule "pack/derwiath/start/vim-deus"]
 	path = pack/derwiath/start/vim-deus
-	url = git@github.com:ajmwagar/vim-deus.git
+	url = https://github.com/ajmwagar/vim-deus.git
 [submodule "pack/derwiath/start/ron.vim"]
 	path = pack/derwiath/start/ron.vim
 	url = git@github.com:derwiath/ron.vim.git
 [submodule "pack/derwiath/start/vim-ps1"]
 	path = pack/derwiath/start/vim-ps1
-	url = git@github.com:PProvost/vim-ps1.git
+	url = https://github.com/PProvost/vim-ps1.git
 [submodule "pack/derwiath/opt/editorconfig-vim"]
 	path = pack/derwiath/opt/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
@@ -96,4 +96,4 @@
 	url = git@github.com:derwiath/vim-flipit.git
 [submodule "pack/derwiath/opt/vim-pico8-syntax"]
 	path = pack/derwiath/opt/vim-pico8-syntax
-	url = git@github.com:justinj/vim-pico8-syntax.git
+	url = https://github.com/justinj/vim-pico8-syntax.git
