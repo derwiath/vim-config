@@ -142,6 +142,7 @@ noremap <silent> <Leader>e :execute('RunItDispatch ' . g:vim_runit_script . ' ed
 " ## derwiath/vim-toggleit
 noremap <silent> <Leader>n :ToggleItNumber<CR>
 noremap <silent> <Leader>q :ToggleItQuickfix<CR>
+noremap <silent> <F11> :ToggleItFullScreen<CR>
 
 " ## derwiath/vim-flipit
 packadd vim-flipit
