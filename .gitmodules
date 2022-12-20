@@ -97,3 +97,6 @@
 [submodule "pack/derwiath/opt/vim-pico8-syntax"]
 	path = pack/derwiath/opt/vim-pico8-syntax
 	url = https://github.com/justinj/vim-pico8-syntax.git
+[submodule "pack/derwiath/opt/pico-8.vim"]
+	path = pack/derwiath/opt/pico-8.vim
+	url = https://github.com/Bakudankun/PICO-8.vim.git
