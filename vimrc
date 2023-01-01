@@ -110,6 +110,8 @@ noremap <Leader>w :tabnew<CR>
 noremap <C-TAB> :tabnext<CR>
 noremap <C-S-TAB> :tabprev<CR>
 
+noremap <Leader>r :execute 'vertical resize ' .. (&colorcolumn + 3)<CR>
+
 " CTRL-C in visual mode to copy selection
 vnoremap <C-C> "+y
 " CTRL-V in normal mode to paste (after cursor)
