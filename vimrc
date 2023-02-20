@@ -3,6 +3,7 @@ set nocompatible
 filetype off
 syntax on
 
+let g:derwiath_vim_config=expand('<sfile>:p')
 let g:derwiath_vim_config_dir=expand('<sfile>:p:h')
 " Look for packages in $(current directory)/pack
 let &packpath.=',' . g:derwiath_vim_config_dir
@@ -116,6 +117,7 @@ noremap <C-TAB> :tabnext<CR>
 noremap <C-S-TAB> :tabprev<CR>
 
 noremap <Leader>r :execute 'vertical resize ' .. (&colorcolumn + 3)<CR>
+noremap <Leader>v :exec("e " . g:derwiath_vim_config)<CR>
 
 " CTRL-C in visual mode to copy selection
 vnoremap <C-C> "+y
