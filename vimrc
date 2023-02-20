@@ -62,6 +62,11 @@ if has("gui_running")
   set lines=99999 columns=999999
 endif
 
+" Neovide config
+if exists("g:neovide")
+  let g:neovide_cursor_animation_length = 0
+endif
+
 set diffopt=filler,vertical
 
 " backspace and cursor keys wrap to previous/next line
