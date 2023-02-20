@@ -108,8 +108,8 @@ noremap <F2> ]c
 noremap <S-F2> [c
 noremap <F3> :lnext<CR>
 noremap <S-F3> :lprev<CR>
-noremap <F8> :cnext<CR>
-noremap <S-F8> :cprev<CR>
+noremap <C-M> :cnext<CR>
+noremap <S-M> :cprev<CR>
 noremap <C-B> :cnfile<CR>
 noremap <S-B> :cpfile<CR>
 noremap <Leader>w :tabnew<CR>
