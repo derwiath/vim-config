@@ -116,7 +116,7 @@ noremap <Leader>w :tabnew<CR>
 noremap <C-TAB> :tabnext<CR>
 noremap <C-S-TAB> :tabprev<CR>
 
-noremap <Leader>r :execute 'vertical resize ' .. (&colorcolumn + 3)<CR>
+noremap <Leader>r :execute 'vertical resize ' .. (&colorcolumn + 7)<CR>
 noremap <Leader>v :exec("e " . g:derwiath_vim_config)<CR>
 
 " CTRL-C in visual mode to copy selection
