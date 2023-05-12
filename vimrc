@@ -275,7 +275,7 @@ au FileType cpp vnoremap <silent> <Leader>b :'<,'>ClangFormatRange<CR>
 
 " Rust
 let g:rustfmt_autosave = 1
-au FileType rust nmap <silent> <LocalLeader>m :Dispatch cargo build --release<CR>
+au FileType rust nmap <silent> <LocalLeader>m :Dispatch cargo build<CR>
 au FileType rust nmap <silent> <LocalLeader>u :Dispatch cargo test<CR>
 au FileType rust nmap <silent> <LocalLeader>b :RustFmt<CR>
 au FileType rust set number
