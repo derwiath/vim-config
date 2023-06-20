@@ -97,3 +97,6 @@
 [submodule "pack/derwiath/opt/pico-8.vim"]
 	path = pack/derwiath/opt/pico-8.vim
 	url = https://github.com/Bakudankun/PICO-8.vim.git
+[submodule "pack/derwiath/opt/vim-glsl"]
+	path = pack/derwiath/opt/vim-glsl
+	url = git@github.com:tikhomirov/vim-glsl.git

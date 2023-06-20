@@ -160,6 +160,9 @@ noremap <silent> <Leader>h :FlipIt<CR>
 " ## pico-8
 packadd pico-8.vim
 
+" ## vim-glsl
+packadd vim-glsl
+
 " Make Enter go to current line in quickfix window
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
