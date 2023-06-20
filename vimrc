@@ -339,12 +339,22 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Remap keys for applying codeAction to the current buffer.
+nmap <Leader>aa  <Plug>(coc-codeaction)
+
 " Applying codeAction to the selected region.
 " Example: `<Leader>aap` for current paragraph
-xmap <Leader>a  <Plug>(coc-codeaction-selected)
-nmap <Leader>a  <Plug>(coc-codeaction-selected)
-" Remap keys for applying codeAction to the current buffer.
-nmap <Leader>ac  <Plug>(coc-codeaction)
+xmap <Leader>as  <Plug>(coc-codeaction-selected)
+nmap <Leader>as  <Plug>(coc-codeaction-selected)
+
+nmap <Leader>al  <Plug>(coc-codeaction-line)
+
+nmap <Leader>ac  <Plug>(coc-codeaction-cursor)
+
+nmap <Leader>az  <Plug>(coc-codeaction-source)
+
+nmap <Leader>ar  <Plug>(coc-command-repeat)
+
 " Apply AutoFix to problem on the current line.
 nmap <Leader>af  <Plug>(coc-fix-current)
 
