@@ -47,6 +47,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 color deus
 let g:deus_termcolors=256
+highlight link CocInlayHint deusYellow
 
 function! GuiTabLabel()
   return fnamemodify(bufname(winbufnr(1)), ":t")
