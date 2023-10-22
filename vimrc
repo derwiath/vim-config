@@ -369,6 +369,9 @@ nmap <Leader>ar  <Plug>(coc-command-repeat)
 " Apply AutoFix to problem on the current line.
 nmap <Leader>af  <Plug>(coc-fix-current)
 
+" Rename symbol
+nmap <Leader>ar <Plug>(coc-rename)
+
 nnoremap <silent><nowait> <Leader>l :CocList<CR>
 nnoremap <silent><nowait> <Leader>s :CocList symbols<CR>
 
