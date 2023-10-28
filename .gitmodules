@@ -59,7 +59,7 @@
 	path = pack/derwiath/opt/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "pack/derwiath/start/plantuml-syntax"]
-	path = pack/derwiath/start/plantuml-syntax
+	path = pack/derwiath/opt/plantuml-syntax
 	url = https://github.com/aklt/plantuml-syntax.git
 [submodule "pack/derwiath/start/vim-radical"]
 	path = pack/derwiath/start/vim-radical
