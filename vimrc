@@ -144,37 +144,17 @@ nnoremap <silent> <Leader>p :PasteWithoutIndent<CR>
 
 noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 
-" # Plugin package configs
+" Make Enter go to current line in quickfix window
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
-" ## derwiath/vim-grepit
-nnoremap <silent> <Leader>f :set operatorfunc=GrepItOperator<CR>g@
-vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
-let g:grepit_lang_map = {
-  \ "js" : "js,ts,tsx,json" ,
-  \ }
 set grepprg=rg
 
-" ## derwiath/vim-runit
-if has('win32')
-  let g:vim_runit_script='.vim-runit-cmd.bat'
-else
-  let g:vim_runit_script='.vim-runit-cmd.sh'
-endif
-noremap <silent> <Leader>m :execute('RunItMake ' . g:vim_runit_script . ' make')<CR>
-noremap <silent> <Leader>c :execute('RunItMake ' . g:vim_runit_script . ' make_file ' . expand('%s'))<CR>
-noremap <silent> <Leader>u :execute('RunItDispatch ' . g:vim_runit_script . ' test')<CR>
-noremap <silent> <Leader>x :execute('RunItDispatch ' . g:vim_runit_script . ' extra')<CR>
-noremap <silent> <Leader>y :execute('RunItDispatch ' . g:vim_runit_script . ' tags')<CR>
-noremap <silent> <Leader>e :execute('RunItDispatch ' . g:vim_runit_script . ' editor')<CR>
+SourceConfig 'vim-grepit'
+SourceConfig 'vim-runit'
+SourceConfig 'vim-toggleit'
 
-" ## derwiath/vim-toggleit
-noremap <silent> <Leader>n :ToggleItNumber<CR>
-noremap <silent> <Leader>q :ToggleItQuickfix<CR>
-noremap <silent> <F11> :ToggleItFullScreen<CR>
-
-" ## derwiath/vim-flipit
 packadd vim-flipit
-noremap <silent> <Leader>h :FlipIt<CR>
+SourceConfig 'vim-flipit'
 
 " ## pico-8
 " packadd pico-8.vim
@@ -182,212 +162,19 @@ noremap <silent> <Leader>h :FlipIt<CR>
 " ## vim-glsl
 packadd vim-glsl
 
-" Make Enter go to current line in quickfix window
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-
-" Configure fzf
 packadd fzf
 packadd fzf.vim
-let g:fzf_preview_window = ''
-let g:fzf_history_dir = '~/temp/fzf-history'
-let $FZF_DEFAULT_COMMAND='rg --files'
+SourceConfig 'fzf'
 
-noremap <C-p> :Files<CR>
-noremap <C-g> :Rg<CR>
+SourceConfig 'csindent'
 
-" ## csindent
-let g:csindent_ini = join([g:derwiath_vim_config_dir, 'vim_csindent.ini'], '/')
+SourceConfig 'bad-whitespace'
 
-" Configure bad-whitespace
-noremap <silent> <Leader><Space> :EraseBadWhitespace<CR>
-highlight default BadWhitespace ctermbg=red guibg=darkgrey
-highlight ColorColumn ctermbg=red guibg=darkgrey
+SourceConfig 'clang-format'
 
-" clang-format
-function! s:GetParentDirectory(filename)
-  let l:filename_with_fwd_slash = substitute(a:filename, '\\', '/', 'g')
-  let l:parts = split(l:filename_with_fwd_slash, '\/')
-  return join(l:parts[0:-2], '/')
-endfunction
+SourceConfig 'rust'
 
-function! s:GetClangFormatOverride(basename)
-  let l:current_file_dir = expand('%:p:h')
-  let l:clang_format_path_file = findfile(a:basename, l:current_file_dir . ';')
-  if l:clang_format_path_file == ''
-    return ''
-  endif
-
-  let l:content = readfile(l:clang_format_path_file)
-  let l:override = json_decode(l:content)
-  if !has_key(l:override, 'path')
-    echo 'Warning: failed to find "path" key in ' . l:clang_format_path_file
-    return ''
-  endif
-  let l:clang_format_path = substitute(l:override['path'], '\\', '/', 'g')
-  let l:full_path = exepath(l:clang_format_path)
-  if l:full_path != ''
-    return l:full_path
-  endif
-
-  let l:clang_format_path_dir = s:GetParentDirectory(l:clang_format_path_file)
-  let l:full_path = exepath(l:clang_format_path_dir . '/' . l:clang_format_path)
-  if l:full_path != ''
-    return l:full_path
-  endif
-
-  echoerr 'Failed to find ' . l:clang_format_path . ' '
-  return ''
-endfunction
-
-function! s:ClangFormatLines(lines)
-  if !exists('g:clang_format_script')
-    echoerr 'Please define g:clang_format_script with full path to clang-format.py'
-    return
-  endif
-
-  if has('python3')
-    let l:python_cmd = 'py3file'
-  elseif has('python')
-    let l:python_cmd = 'pyfile'
-  else
-    echoerr 'Missing python integration, can not run clang-format'
-    return
-  endif
-
-  let l:clang_format_path = s:GetClangFormatOverride('.clang-format-override.json')
-  if l:clang_format_path != ''
-    if !filereadable(l:clang_format_path)
-      echoerr 'Speficied clang-format path does not exist: ' . l:clang_format_path
-      return
-    endif
-    if exists('g:clang_format_path')
-      let l:old_clang_format_path = g:clang_format_path
-    endif
-    let g:clang_format_path = l:clang_format_path
-  endif
-
-  let l:lines = a:lines
-  silent execute l:python_cmd . ' ' . ' ' . g:clang_format_script
-
-  if l:clang_format_path != ''
-    if exists('l:old_clang_format_path')
-      let g:clang_format_path = l:old_clang_format_path
-    else
-      unlet g:clang_format_path
-    endif
-  endif
-endfunction
-
-function! s:ClangFormatCmd()
-  let l:currentline=line('.')
-  let l:lines=l:currentline . ':' . l:currentline
-  call s:ClangFormatLines(l:lines)
-endf
-
-function! s:ClangFormatRangeCmd() range
-  let l:lines=a:firstline . ':' . a:lastline
-  call s:ClangFormatLines(l:lines)
-endfunction
-
-
-command! -nargs=0 ClangFormat call <SID>ClangFormatCmd()
-command! -nargs=0 -range ClangFormatRange '<,'>call <SID>ClangFormatRangeCmd()
-au FileType cpp nnoremap <silent> <Leader>b :ClangFormat<CR>
-au FileType cpp vnoremap <silent> <Leader>b :'<,'>ClangFormatRange<CR>
-
-" Rust
-let g:rustfmt_autosave = 1
-au FileType rust nmap <silent> <LocalLeader>m :Dispatch cargo build<CR>
-au FileType rust nmap <silent> <LocalLeader>u :Dispatch cargo test<CR>
-au FileType rust nmap <silent> <LocalLeader>b :RustFmt<CR>
-au FileType rust set number
-au FileType rust set colorcolumn=101
-au FileType rust set fileencoding=utf-8
-
-" Configure CoC
-" =============
 packadd coc.nvim
+SourceConfig 'coc'
 
-set nohidden
-set updatetime=100  " Lower default from 4s
-set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
-set signcolumn=yes "Always show the signcolumn
-
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-" Insert <tab> when previous text is space, refresh completion if not.
-inoremap <silent><expr> <TAB>
-	\ coc#pum#visible() ? coc#pum#next(1):
-	\ <SID>check_back_space() ? "\<Tab>" :
-	\ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <CR> to confirm completion.
-inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
-
-" Navigate diagnostics
-nmap <silent> <F4> <Plug>(coc-diagnostic-next)
-nmap <silent> <S-F4> <Plug>(coc-diagnostic-prev)
-
-" GoTo code navigation.
-nmap <silent> <Leader>gd <Plug>(coc-definition)
-nmap <silent> <Leader>gt <Plug>(coc-type-definition)
-nmap <silent> <Leader>gi <Plug>(coc-implementation)
-nmap <silent> <Leader>gr <Plug>(coc-references)
-
-" Code formatting
-au FileType cs,python nnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
-au FileType cs,python vnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Use <Leader>d to show documentation in preview window.
-nnoremap <silent> <Leader>d :call <SID>show_documentation()<CR>
-
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <Leader>aa  <Plug>(coc-codeaction)
-
-" Applying codeAction to the selected region.
-" Example: `<Leader>aap` for current paragraph
-xmap <Leader>as  <Plug>(coc-codeaction-selected)
-nmap <Leader>as  <Plug>(coc-codeaction-selected)
-
-nmap <Leader>al  <Plug>(coc-codeaction-line)
-
-nmap <Leader>ac  <Plug>(coc-codeaction-cursor)
-
-nmap <Leader>az  <Plug>(coc-codeaction-source)
-
-nmap <Leader>ar  <Plug>(coc-command-repeat)
-
-" Apply AutoFix to problem on the current line.
-nmap <Leader>af  <Plug>(coc-fix-current)
-
-" Rename symbol
-nmap <Leader>ar <Plug>(coc-rename)
-
-nnoremap <silent><nowait> <Leader>l :CocList<CR>
-nnoremap <silent><nowait> <Leader>s :CocList symbols<CR>
-
-" =============
-" Configure CoC end
-
-" Config vim-dispatch to prioritize iTerm
-let g:dispatch_handlers = ['iterm', 'tmux', 'job', 'screen', 'windows', 'x11', 'headless',]
+SourceConfig 'vim-dispatch'
