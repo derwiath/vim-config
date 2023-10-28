@@ -86,7 +86,7 @@
 	path = pack/derwiath/start/ron.vim
 	url = git@github.com:derwiath/ron.vim.git
 [submodule "pack/derwiath/start/vim-ps1"]
-	path = pack/derwiath/start/vim-ps1
+	path = pack/derwiath/opt/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
 [submodule "pack/derwiath/opt/editorconfig-vim"]
 	path = pack/derwiath/opt/editorconfig-vim
