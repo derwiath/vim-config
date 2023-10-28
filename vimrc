@@ -14,6 +14,16 @@ if has('win32')
   let &viewdir=expand('$USERPROFILE') . '\vimfiles\view'
 endif
 
+function s:SourceConfigCmd(config)
+  let l:script_path=join([g:derwiath_vim_config_dir, "config", a:config . '.vim'], '/')
+  if filereadable(l:script_path)
+    exec "source " . l:script_path
+  else
+    echoerr "Failed to find: " . l:script_path
+  endif
+endfunction
+command! -nargs=1 SourceConfig call <SID>SourceConfigCmd(<args>)
+
 " English please
 set langmenu=en_US
 let $LANG = 'en_US'
