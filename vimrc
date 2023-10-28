@@ -142,6 +142,7 @@ vnoremap <silent> <Leader>f :<c-u>call GrepItOperator(visualmode())<CR>
 let g:grepit_lang_map = {
   \ "js" : "js,ts,tsx,json" ,
   \ }
+set grepprg=rg
 
 " ## derwiath/vim-runit
 if has('win32')
