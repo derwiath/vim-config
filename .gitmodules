@@ -65,7 +65,7 @@
 	path = pack/derwiath/start/vim-radical
 	url = https://github.com/glts/vim-radical.git
 [submodule "pack/derwiath/start/vim-magnum"]
-	path = pack/derwiath/start/vim-magnum
+	path = pack/derwiath/opt/vim-magnum
 	url = https://github.com/glts/vim-magnum.git
 [submodule "pack/derwiath/opt/vim-ddf"]
 	path = pack/derwiath/opt/vim-ddf
