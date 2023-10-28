@@ -83,7 +83,7 @@
 	path = pack/derwiath/start/vim-deus
 	url = https://github.com/ajmwagar/vim-deus.git
 [submodule "pack/derwiath/start/ron.vim"]
-	path = pack/derwiath/start/ron.vim
+	path = pack/derwiath/opt/ron.vim
 	url = git@github.com:derwiath/ron.vim.git
 [submodule "pack/derwiath/start/vim-ps1"]
 	path = pack/derwiath/opt/vim-ps1
