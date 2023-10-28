@@ -1,0 +1,16 @@
+{
+  "rust-analyzer.inlayHints.typeHints": false,
+  "rust-analyzer.inlayHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": false,
+  "rust-analyzer.inlayHints.closureReturnTypeHints.enable": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.server.path": "C:/Users/Andreas/.rustup/toolchains/stable-x86_64-pc-windows-msvc/bin/rust-analyzer",
+  "rust-analyzer.runnables.command": "clippy",
+  "rust-analyzer.checkOnSave.target": "x86_64-pc-windows-msvc",
+  "rust-analyzer.checkOnSave.enable": true,
+  "rust-analyzer.checkOnSave.extraArgs": [
+    "--target-dir", "C:\\Users\\andreas\\temp\\rust-analyzer-check"
+  ]
+}
