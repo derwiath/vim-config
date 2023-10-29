@@ -152,8 +152,6 @@ set grepprg=rg
 SourceConfig 'vim-grepit'
 SourceConfig 'vim-runit'
 SourceConfig 'vim-toggleit'
-
-packadd vim-flipit
 SourceConfig 'vim-flipit'
 
 " ## pico-8
@@ -162,19 +160,10 @@ SourceConfig 'vim-flipit'
 " ## vim-glsl
 packadd vim-glsl
 
-packadd fzf
-packadd fzf.vim
 SourceConfig 'fzf'
-
 SourceConfig 'csindent'
-
 SourceConfig 'bad-whitespace'
-
 SourceConfig 'clang-format'
-
 SourceConfig 'rust'
-
-packadd coc.nvim
 SourceConfig 'coc'
-
 SourceConfig 'vim-dispatch'
