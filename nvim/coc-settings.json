@@ -1,6 +1,6 @@
 {
   "rust-analyzer.inlayHints.typeHints.enable": true,
-  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": "always",
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "never",
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
