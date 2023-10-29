@@ -9,5 +9,5 @@ set background=dark
 color deus
 let g:deus_termcolors=256
 
-highlight link CocInlayHint deusYellow
+highlight link CocInlayHint deusGray
 
