@@ -17,5 +17,6 @@
   "rust-analyzer.check.features": "all",
   "rust-analyzer.check.extraArgs": [
     "--target-dir", "C:\\Users\\andreas\\temp\\rust-analyzer-check"
-  ]
+  ],
+  "svelte.enable-ts-plugin": true
 }
