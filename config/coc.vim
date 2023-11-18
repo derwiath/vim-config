@@ -68,7 +68,7 @@ nmap <Leader>ac  <Plug>(coc-codeaction-cursor)
 
 nmap <Leader>az  <Plug>(coc-codeaction-source)
 
-nmap <Leader>ar  <Plug>(coc-command-repeat)
+"nmap <Leader>ar  <Plug>(coc-command-repeat)
 
 " Apply AutoFix to problem on the current line.
 nmap <Leader>af  <Plug>(coc-fix-current)
