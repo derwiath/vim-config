@@ -100,3 +100,6 @@
 [submodule "pack/derwiath/opt/vim-glsl"]
 	path = pack/derwiath/opt/vim-glsl
 	url = git@github.com:tikhomirov/vim-glsl.git
+[submodule "pack/derwiath/opt/vim-svelte-plugin"]
+	path = pack/derwiath/opt/vim-svelte-plugin
+	url = git@github.com:leafOfTree/vim-svelte-plugin.git
