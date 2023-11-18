@@ -37,7 +37,6 @@ nmap <silent> <Leader>gr <Plug>(coc-references)
 " Code formatting
 au FileType cs,python nnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
 au FileType cs,python vnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
