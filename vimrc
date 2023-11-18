@@ -27,6 +27,9 @@ command! -nargs=1 SourceConfig call <SID>SourceConfigCmd(<args>)
 
 " English please
 set langmenu=en_us
+let $LANG = 'en_us.utf8'
+let $LC_ALL= 'en_us.utf8'
+let $LC_CTYPE= '.utf8'
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
