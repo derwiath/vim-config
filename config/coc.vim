@@ -38,6 +38,9 @@ nmap <silent> <Leader>gr <Plug>(coc-references)
 au FileType cs,python nnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
 au FileType cs,python vnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
 
+au FileType rust nnoremap <silent> <LocalLeader>em :CocCommand rust-analyzer.expandMacro<CR>
+au FileType rust vnoremap <silent> <LocalLeader>em :CocCommand rust-analyzer.expandMacro<CR>
+
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
