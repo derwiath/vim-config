@@ -76,9 +76,6 @@ SourceConfig 'vim-runit'
 SourceConfig 'vim-toggleit'
 SourceConfig 'vim-flipit'
 
-" ## vim-glsl
-"packadd vim-glsl
-
 SourceConfig 'pico-8'
 SourceConfig 'fzf'
 SourceConfig 'csindent'
@@ -89,3 +86,6 @@ SourceConfig 'coc'
 SourceConfig 'vim-dispatch'
 SourceConfig 'vim-svelte-plugin'
 SourceConfig 'prettier'
+
+" ## vim-glsl
+"packadd vim-glsl
