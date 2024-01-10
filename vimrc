@@ -76,12 +76,10 @@ SourceConfig 'vim-runit'
 SourceConfig 'vim-toggleit'
 SourceConfig 'vim-flipit'
 
-" ## pico-8
-" packadd pico-8.vim
-
 " ## vim-glsl
 "packadd vim-glsl
 
+SourceConfig 'pico-8'
 SourceConfig 'fzf'
 SourceConfig 'csindent'
 SourceConfig 'bad-whitespace'
