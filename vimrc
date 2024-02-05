@@ -1,8 +1,5 @@
 set nocompatible
 
-filetype off
-syntax on
-
 let g:derwiath_vim_config=expand('<sfile>:p')
 let g:derwiath_vim_config_dir=expand('<sfile>:p:h')
 " Look for packages in $(current directory)/pack
@@ -52,8 +49,10 @@ set completeopt=menu,preview
 
 set diffopt=filler,vertical
 
+filetype on
 filetype plugin on
 filetype indent on
+syntax on
 
 " Shortcuts
 let mapleader=","
