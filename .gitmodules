@@ -20,7 +20,7 @@
 	path = pack/derwiath/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "pack/derwiath/start/csindent.vim"]
-	path = pack/derwiath/start/csindent.vim
+	path = pack/derwiath/opt/csindent.vim
 	url = git@github.com:derwiath/csindent.vim.git
 [submodule "pack/derwiath/opt/vim-perforce"]
 	path = pack/derwiath/opt/vim-perforce
