@@ -86,5 +86,7 @@ SourceConfig 'vim-dispatch'
 SourceConfig 'vim-svelte-plugin'
 SourceConfig 'prettier'
 
+SourceConfig 'vim-perforce'
+
 " ## vim-glsl
 "packadd vim-glsl
