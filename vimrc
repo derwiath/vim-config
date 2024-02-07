@@ -9,7 +9,7 @@ let &runtimepath=g:derwiath_vim_config_dir . ',' . &runtimepath
 
 if has('win32')
   let &viewdir=expand('$USERPROFILE') . '\vimfiles\view'
-  let g:python3_host_prog=expand('$USERPROFILE') . '\AppData\Local\Programs\Python\Python312\python.exe'
+  let g:python3_host_prog=expand('$USERPROFILE') . '\AppData\Local\Programs\Python\Python310\python.exe'
 endif
 
 function s:SourceConfigCmd(config)
