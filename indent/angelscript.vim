@@ -8,11 +8,11 @@ setlocal cindent
 setlocal shiftwidth=4
 setlocal tabstop=4
 setlocal softtabstop=4
-setlocal noexpandtab
+setlocal expandtab
 
 setlocal nowrap
-setlocal textwidth=132
-setlocal colorcolumn=133
+setlocal textwidth=120
+setlocal colorcolumn=121
 
 let b:undo_indent = "setl cin<"
 
