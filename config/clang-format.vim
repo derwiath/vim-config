@@ -88,3 +88,5 @@ command! -nargs=0 ClangFormat call <SID>ClangFormatCmd()
 command! -nargs=0 -range ClangFormatRange '<,'>call <SID>ClangFormatRangeCmd()
 au FileType cpp nnoremap <silent> <Leader>b :ClangFormat<CR>
 au FileType cpp vnoremap <silent> <Leader>b :'<,'>ClangFormatRange<CR>
+
+au FileType angelscript vnoremap <silent> <Leader>b :'<,'>ClangFormatRange<CR>
