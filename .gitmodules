@@ -103,3 +103,6 @@
 [submodule "pack/derwiath/opt/vim-svelte-plugin"]
 	path = pack/derwiath/opt/vim-svelte-plugin
 	url = git@github.com:leafOfTree/vim-svelte-plugin.git
+[submodule "pack/derwiath/opt/context_filetype.vim"]
+	path = pack/derwiath/opt/context_filetype.vim
+	url = git@github.com:Shougo/context_filetype.vim.git
