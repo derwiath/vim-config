@@ -1,4 +1,9 @@
 {
+  "svelte.enable-ts-plugin": true,
+
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "never",
@@ -17,6 +22,5 @@
   "rust-analyzer.check.features": "all",
   "rust-analyzer.check.extraArgs": [
     "--target-dir", "C:\\Users\\andreas\\temp\\rust-analyzer-check"
-  ],
-  "svelte.enable-ts-plugin": true
+  ]
 }
