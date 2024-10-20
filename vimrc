@@ -84,9 +84,12 @@ SourceConfig 'rust'
 SourceConfig 'coc'
 SourceConfig 'vim-dispatch'
 SourceConfig 'vim-svelte-plugin'
+"SourceConfig 'vim-svelte'
+SourceConfig 'context_filetype'
 SourceConfig 'prettier'
 
 SourceConfig 'vim-perforce'
+
 
 " ## vim-glsl
 "packadd vim-glsl

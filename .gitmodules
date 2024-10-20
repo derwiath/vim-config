@@ -106,3 +106,6 @@
 [submodule "pack/derwiath/opt/context_filetype.vim"]
 	path = pack/derwiath/opt/context_filetype.vim
 	url = git@github.com:Shougo/context_filetype.vim.git
+[submodule "pack/derwiath/opt/vim-svelte"]
+	path = pack/derwiath/opt/vim-svelte
+	url = git@github.com:evanleck/vim-svelte.git
