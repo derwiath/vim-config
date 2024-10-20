@@ -6,8 +6,8 @@ let b:did_indent = 1
 setlocal cindent
 
 setlocal shiftwidth=2
-setlocal tabstop=4
-setlocal softtabstop=4
+setlocal tabstop=2
+setlocal softtabstop=2
 setlocal expandtab
 
 setlocal textwidth=100
