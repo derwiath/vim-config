@@ -82,6 +82,7 @@ SourceConfig 'bad-whitespace'
 SourceConfig 'clang-format'
 SourceConfig 'rust'
 SourceConfig 'coc'
+SourceConfig 'python'
 SourceConfig 'vim-dispatch'
 SourceConfig 'vim-svelte-plugin'
 "SourceConfig 'vim-svelte'
@@ -89,6 +90,7 @@ SourceConfig 'context_filetype'
 SourceConfig 'prettier'
 
 SourceConfig 'vim-perforce'
+
 
 
 " ## vim-glsl

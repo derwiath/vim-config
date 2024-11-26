@@ -40,9 +40,9 @@ function! s:ClangFormatLines(lines)
     return
   endif
 
-  if has('python3')
-    let l:python_cmd = 'py3file'
-  elseif has('python')
+  if g:python3_host_prog != ''
+    let l:python_cmd = 'pyfile'
+  elseif has('python3')
     let l:python_cmd = 'pyfile'
   else
     echoerr 'Missing python integration, can not run clang-format'
