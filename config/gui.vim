@@ -1,5 +1,11 @@
 if has("gui_running")
-  set guifont=Hack:h12
+
+  if has("win32") || has("win64")
+    set guifont=Hack:h12
+  else
+    set guifont=Hack:h13
+  endif
+
   set guioptions-=T " Remove toolbar
   set guioptions-=r " Remove right scrollbar
 "  if exists(":winpos") == 2
