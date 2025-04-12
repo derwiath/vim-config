@@ -10,17 +10,16 @@
   "rust-analyzer.inlayHints.closingBraceHints.enable": false,
   "rust-analyzer.inlayHints.expressionAdjustmentHints.enable": "never",
   "rust-analyzer.inlayHints.parameterHints.enable": false,
-  "rust-analyzer.server.path": "C:/Users/Andreas/.rustup/toolchains/stable-x86_64-pc-windows-msvc/bin/rust-analyzer",
+  "rust-analyzer.server.path": "/Users/andreas/.rustup/toolchains/stable-aarch64-apple-darwin-msvc/bin/rust-analyzer",
   "rust-analyzer.cargo.features": "all",
   "rust-analyzer.runnables.command": "clippy",
   "rust-analyzer.checkOnSave": true,
   "rust-analyzer.check.command": "clippy",
   "rust-analyzer.check.targets": [
-    "x86_64-pc-windows-msvc",
-    "wasm32-unknown-unknown"
+    "aarch64-apple-darwin"
   ],
   "rust-analyzer.check.features": "all",
   "rust-analyzer.check.extraArgs": [
-    "--target-dir", "C:\\Users\\andreas\\temp\\rust-analyzer-check"
+    "--target-dir", "/Users/andreas/temp/rust-analyzer-check"
   ]
 }
