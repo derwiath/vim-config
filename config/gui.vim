@@ -19,7 +19,9 @@ endif
 function! GuiTabLabel()
   return fnamemodify(bufname(winbufnr(1)), ":t")
 endfunction
-set guitablabel=%!GuiTabLabel()
+if !exists("g:neovide")
+  set guitablabel=%!GuiTabLabel()
+endif
 
 
 " Neovide config
