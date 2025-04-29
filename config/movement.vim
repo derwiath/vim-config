@@ -4,12 +4,6 @@ noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
 " Look for tags file upwards in directory hierarchy
 set tags=./tags,tags;
 
-" Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
 " Disable arrow keys
 map <up> <nop>
 map <down> <nop>
@@ -76,6 +70,12 @@ function! s:RemapHomeRow()
       execute mode . 'noremap ' . from . ' ' . to
     endfor
   endfor
+
+  " Easy window navigation
+  for [from, to] in l:mappings
+    execute 'map' . '<C-' . from . '> <C-w>' . to
+  endfor
+
 endfunction
 
 function! ToggleHomeRowLayout()
