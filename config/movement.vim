@@ -78,7 +78,7 @@ function! s:RemapHomeRow()
 
 endfunction
 
-function! ToggleHomeRowLayout()
+function! s:ToggleHomeRowLayout()
   if s:current_layout ==# 'swedish'
     let s:current_layout = 'us'
   else
@@ -88,6 +88,9 @@ function! ToggleHomeRowLayout()
   echo "Home row layout toggled to: " . s:current_layout
 endfunction
 
-nnoremap <silent> <Leader>k :call <SID>ToggleHomeRowLayout()<CR>
+" Create a user command for toggling
+command! ToggleHomeRow call <SID>ToggleHomeRowLayout()
+
+nnoremap <silent> <Leader>k :ToggleHomeRow<CR>
 
 silent! call <SID>RemapHomeRow()
