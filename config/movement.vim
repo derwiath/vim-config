@@ -45,17 +45,13 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 vnoremap <BS> d
 
 " Home row remapping script with toggle between ';' and 'ö'
-
-" Configurable variable: set in your .vimrc before sourcing this script
 if !exists('g:home_row_layout')
   let g:home_row_layout = 'swedish' " or 'us'
 endif
 
-" Internal state
 let s:current_layout = g:home_row_layout
 
 function! s:RemapHomeRow()
-  " Define key mappings
   let l:mappings = [
         \ ['j', 'h'],
         \ ['k', 'j'],
@@ -63,10 +59,8 @@ function! s:RemapHomeRow()
         \ [s:current_layout ==# 'swedish' ? 'ö' : ';', 'l']
         \ ]
 
-  " List of modes to map
   let l:modes = ['n', 'v', 'o']
 
-  " Unmap only the key from the previous layout
   if s:current_layout ==# 'swedish'
     let l:unmap_key = ';'
   else
@@ -77,7 +71,6 @@ function! s:RemapHomeRow()
     execute mode . 'unmap ' . l:unmap_key
   endfor
 
-  " Apply new mappings
   for mode in l:modes
     for [from, to] in l:mappings
       execute mode . 'noremap ' . from . ' ' . to
@@ -95,7 +88,6 @@ function! ToggleHomeRowLayout()
   echo "Home row layout toggled to: " . s:current_layout
 endfunction
 
-nnoremap <silent> <Leader>k :call ToggleHomeRowLayout()<CR>
+nnoremap <silent> <Leader>k :call <SID>ToggleHomeRowLayout()<CR>
 
-" Initial remap
-call s:RemapHomeRow()
+silent! call <SID>RemapHomeRow()
