@@ -29,10 +29,10 @@ nmap <silent> <F4> <Plug>(coc-diagnostic-next)
 nmap <silent> <S-F4> <Plug>(coc-diagnostic-prev)
 
 " GoTo code navigation.
-nmap <silent> <Leader>gd <Plug>(coc-definition)
-nmap <silent> <Leader>gt <Plug>(coc-type-definition)
-nmap <silent> <Leader>gi <Plug>(coc-implementation)
-nmap <silent> <Leader>gr <Plug>(coc-references)
+"nmap <silent> <Leader>gd <Plug>(coc-definition)
+"nmap <silent> <Leader>gt <Plug>(coc-type-definition)
+"nmap <silent> <Leader>gi <Plug>(coc-implementation)
+"nmap <silent> <Leader>gr <Plug>(coc-references)
 
 " Code formatting
 au FileType cs,python nnoremap <silent> <LocalLeader>b  <Plug>(coc-format-selected)
