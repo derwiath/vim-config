@@ -1,8 +1,3 @@
-" Tags
-noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
-
-" Look for tags file upwards in directory hierarchy
-set tags=./tags,tags;
 
 " Disable arrow keys
 map <up> <nop>
@@ -10,11 +5,18 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-noremap <silent> <ESC> :nohlsearch<CR>
-
 " Next/Prev Diff
 noremap <F2> ]c
 noremap <S-F2> [c
+
+
+noremap <silent> <ESC> :nohlsearch<CR>
+
+" Tags
+noremap <silent> <Leader>t :exec("tjump ".expand("<cword>"))<CR>
+
+" Look for tags file upwards in directory hierarchy
+set tags=./tags,tags;
 
 " Quickfix movement
 noremap <F3> :lnext<CR>
@@ -35,6 +37,7 @@ noremap <C-S-TAB> :tabprev<CR>
 " Backspace
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
+
 " backspace in Visual mode deletes selection
 vnoremap <BS> d
 
